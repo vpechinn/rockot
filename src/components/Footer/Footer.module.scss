@@ -1,0 +1,33 @@
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.footer {
+  margin-top: 130px;
+  &__application {
+    p {
+      text-align: center;
+      font-size: 24px;
+    }
+  }
+  &__contacts {
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    width: 320px;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  &__item  {
+    font-size: 32px;
+    display: flex;
+    gap: 20px;
+  }
+}

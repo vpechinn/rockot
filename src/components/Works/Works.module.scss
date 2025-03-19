@@ -1,0 +1,38 @@
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.works {
+  margin-top: 150px;
+  &__title {
+    text-align: center;
+    font-size: 38px;
+    text-transform: uppercase;
+  }
+  &__list {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 25px;
+  }
+  &__card {
+    background: white; /* Фон блока */
+    border-radius: 12px; /* Скругление углов */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Мягкая объемная тень */
+    padding: 20px;
+    p {
+      text-align: center;
+    }
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 5px 10px 12px 10px rgba(0, 0, 0, 0.15);
+      transition: all 0.5s;
+    }
+  }
+  &__img {
+    display: block;
+    margin: 0 auto;
+    width: 260px;
+    height: 260px;
+  }
+}

@@ -1,0 +1,43 @@
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  padding-top: 20px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    display: flex;
+    gap: 10px;
+    font-size: 24px;
+  }
+  &__contacts {
+    display: flex;
+    gap: 40px;
+    font-size: 24px;
+  }
+  &__contacts_item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__bot {
+    margin-top: 30px;
+  }
+
+  &__nav {
+    padding-left: 0;
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+    gap: 10px;
+    font-size: 16px;
+  }
+}
+
+
