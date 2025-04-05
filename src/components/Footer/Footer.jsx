@@ -1,17 +1,15 @@
-import { Button } from "antd";
+import { Button } from 'antd';
 
-import { Phone } from "lucide-react";
-import { Mail } from "lucide-react";
-import styles from "../Footer/Footer.module.scss";
+import { Phone } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import styles from '../Footer/Footer.module.scss';
 
 function Footer() {
   return (
     <div className={styles.container}>
       <div className={styles.footer}>
         <div className={styles.footer__application}>
-          <p>
-            Не нашли своё оборудование? Оставьте заявку, и мы свяжемся с вами!
-          </p>
+          <p>Появились вопросы? Получите консультацию по ремонту!</p>
           <Button color="danger" variant="solid" className={styles.footer__btn}>
             Оставить заявку
           </Button>

@@ -6,7 +6,7 @@ function Works() {
   return (
     <div className={styles.container}>
       <div className={styles.works}>
-        <h2 className={styles.works__title}>Готовые решения</h2>
+        <h2 className={styles.works__title}>НАШИ ПРОЕКТЫ</h2>
         <div className={styles.works__list}>
           {data.map((item) => (
             <div key={item.id} className={styles.works__card}>
@@ -20,6 +20,7 @@ function Works() {
           ))}
         </div>
       </div>
+      <button>посмотреть все работы</button>
     </div>
   );
 }

@@ -1,7 +1,7 @@
-import { Phone } from "lucide-react";
-import { Mail } from "lucide-react";
+import { Phone } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
-import styles from "./Header.module.scss";
+import styles from './Header.module.scss';
 
 function Header() {
   return (
@@ -14,21 +14,22 @@ function Header() {
           </div>
           <div className={styles.header__contacts}>
             <div className={styles.header__contacts_item}>
-              <Mail size={28} color="#f50000" />
-              <a>rockot@gmail.com</a>
+              <Mail size={28} color="#FAD65A" />
+              <a>Rokot-nn@mail.ru</a>
             </div>
             <div className={styles.header__contacts_item}>
-              <Phone size={28} color="#f50000" />
-              <a>8800 255 255 85</a>
+              <Phone size={28} color="#FAD60A" />
+              <a>8(986)746-52-00</a>
             </div>
           </div>
         </div>
 
         <div className={styles.header__bot}>
           <ul className={styles.header__nav}>
-            <li>О нас</li>
+            <li>О компании</li>
             <li>Наши преимущества</li>
-            <li>Доставка и оплата</li>
+            <li>Наши Проектын</li> 
+            <li>Готовые решения</li>
             <li>Контакты</li>
           </ul>
         </div>

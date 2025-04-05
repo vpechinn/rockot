@@ -1,10 +1,12 @@
 .container {
+  margin-top: 50px;
   width: 1400px;
   margin: 0 auto;
 }
 
 .promo {
   &__title {
+    margin-top: 70px;
     position: absolute;
     top: 150px;
     color: white;
@@ -40,8 +42,8 @@
 }
 
 .video {
-  margin-top: 150px;
-  width: 100vw;
+  margin-top: 200px;
+  width: 99vw;
   height: 410px;
   object-fit: cover;
   position: absolute;

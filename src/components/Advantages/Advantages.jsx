@@ -1,30 +1,38 @@
-import styles from "./Advantages.module.scss";
+import styles from './Advantages.module.scss';
 
 function Advantages() {
   return (
     <div className={styles.container}>
       <div className={styles.advantages}>
-        <h2 className={styles.advantages__title}>Нащи приумещества</h2>
+        <h2 className={styles.advantages__title}>Отзывы о нашей работе</h2>
         <div className={styles.advantages__list}>
           <div className={styles.advantages__item}>
-            <img src="/img/icons/car.svg" alt="1" />
+            <img
+              src="https://www.pnevmoteh.ru/sites/pnevmoteh.ru/files/styles/large/public/images/letter_scans/blagodarstvennoe_pismo_remprofservis.png?itok=dCSDZCMe"
+              alt="1"
+            />
             <p>Оперативный выезд</p>
           </div>
           <div className={styles.advantages__item}>
-            <img src="/img/icons/rocket.svg" alt="1" />
+            <img
+              src="https://www.pnevmoteh.ru/sites/pnevmoteh.ru/files/styles/large/public/images/letter_scans/blagodarstvennoe_pismo_remprofservis.png?itok=dCSDZCMe"
+              alt="1"
+            />
             <p>Большой станочный парк</p>
           </div>
           <div className={styles.advantages__item}>
-            <img src="/img/icons/graphs.svg" alt="1" />
+            <img
+              src="https://www.pnevmoteh.ru/sites/pnevmoteh.ru/files/styles/large/public/images/letter_scans/blagodarstvennoe_pismo_remprofservis.png?itok=dCSDZCMe"
+              alt="1"
+            />
             <p>10 лет опыта</p>
           </div>
           <div className={styles.advantages__item}>
-            <img src="/img/icons/security.svg" alt="1" />
+            <img
+              src="https://www.pnevmoteh.ru/sites/pnevmoteh.ru/files/styles/large/public/images/letter_scans/blagodarstvennoe_pismo_remprofservis.png?itok=dCSDZCMe"
+              alt="1"
+            />
             <p>Гарантийные обязательства</p>
-          </div>
-          <div className={styles.advantages__item}>
-            <img src="/img/icons/world.svg" alt="1" />
-            <p>Работаем по РФ и СНГ</p>
           </div>
         </div>
       </div>

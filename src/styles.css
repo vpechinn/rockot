@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+body {
+  /* background-color: rgb(224, 220, 220); */
+  /* background-color: rgb(250, 182, 10); */
+  /* background-color: rgb(250, 214, 10); */
+  /* background-color: rgb(250, 182, 10); */
+  font-family: 'Oswald', sans-serif;
+  background: linear-gradient(to right, #ccc 0%, #ccc 1%, #fff 50%, #ccc 99%, #ccc 100%);
+}
