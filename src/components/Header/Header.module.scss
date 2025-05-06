@@ -13,11 +13,15 @@
     display: flex;
     gap: 10px;
     font-size: 24px;
+    img {
+      width: 90px;
+      height: 90px;
+    }
   }
   &__contacts {
     display: flex;
     gap: 40px;
-    font-size: 24px;
+    font-size: 28px;
   }
   &__contacts_item {
     display: flex;
@@ -33,7 +37,7 @@
   &__nav {
     padding-left: 0;
     height: 60px;
-    background-color: rgb(250, 182, 10);
+    // background-color: rgb(250, 182, 10);
     background-color: #ff9900;
     border: 2px solid #000;
     box-shadow: 10px 10px 10px 10px rgba(32, 30, 30, 0.3);
@@ -50,26 +54,7 @@
       position: relative;
       padding: 8px 22px;
       cursor: pointer;
-      // background-color: rgb(250, 182, 10);
-      // background-color: #ff9900;
-      // border: 2px solid #000;
-      // box-shadow: 10px 10px 10px 10px rgba(32, 30, 30, 0.3);
-      // border-radius: 50px;
     }
-    // li:after {
-    //   content: "";
-    //   position: absolute;
-    //   top: 50%;
-    //   right: -20%;
-    //   transform: translate(-50%, -50%);
-    //   width: 4px;
-    //   height: 30px;
-    //   background-color: #000;
-    //   transition: all 0.4;
-    // }
-    // li:last-child:after {
-    //   display: none;
-    // }
     li:hover {
       transform: scale(1.1);
       transition: all 0.4;

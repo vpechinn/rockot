@@ -9,16 +9,16 @@ function Header() {
       <div className={styles.header}>
         <div className={styles.header__top}>
           <div className={styles.header__logo}>
-            <div>logo</div>
-            <div>slogan</div>
+            <div><img src="../../public/img/logo.webp"/></div>
+            {/* <div>slogan</div> */}
           </div>
           <div className={styles.header__contacts}>
             <div className={styles.header__contacts_item}>
-              <Mail size={28} color="#FAD65A" />
+              <Mail size={28} color="#ff9900" />
               <a>Rokot-nn@mail.ru</a>
             </div>
             <div className={styles.header__contacts_item}>
-              <Phone size={28} color="#FAD60A" />
+              <Phone size={28} color="#ff9900" />
               <a>8(986)746-52-00</a>
             </div>
           </div>

@@ -1,27 +1,44 @@
-import { Button } from 'antd';
-
-import { Phone } from 'lucide-react';
-import { Mail } from 'lucide-react';
+import React from 'react';
 import styles from '../Footer/Footer.module.scss';
-
+import { Phone, Mail, MapPin } from 'lucide-react';
 function Footer() {
   return (
-    <div className={styles.container}>
-      <div className={styles.footer}>
-        <div className={styles.footer__application}>
-          <p>Появились вопросы? Получите консультацию по ремонту!</p>
-          <Button color="danger" variant="solid" className={styles.footer__btn}>
-            Оставить заявку
-          </Button>
+    <div className={styles.footer}>
+      <div className={styles.footer__container}>
+        <div className={styles.footer__list}>
+          <a className={styles.footer__item}>Ремонт оборудования</a>
+          <a className={styles.footer__item}>О компании</a>
+          <a className={styles.footer__item}>Контакты</a>
+          <a className={styles.footer__item}>Металлообработка</a>
+          <a className={styles.footer__item}>Наши работы</a>
+          <a className={styles.footer__item}>История</a>
+          <a className={styles.footer__item}>Ремонт спецтехники</a>
+          <a className={styles.footer__item}>Отзывы</a>
+          <a className={styles.footer__item}>Соц Сети</a>
+          <a className={styles.footer__item}>Ремонт спецтехники</a>
         </div>
-        <div className={styles.footer__contacts}>
-          <div className={styles.footer__item}>
-            <Mail size={38} color="#f50000" />
-            <a>rockot@gmail.com</a>
+        <div className={styles.footer__info}>
+          <div className={styles.footer__logo}>
+            <img src="img/logo.webp" />
+            <div>Ваше подразделение</div>
           </div>
-          <div className={styles.footer__item}>
-            <Phone size={36} color="#f50000" />
-            <a>8800 255 255 85</a>
+          <div className={styles.footer__contacts}>
+            <div className={styles.footer__contacts_item}>
+              <MapPin size={28} color="#ff9900" />
+              <a>Улица Пушкина Дом Колутушкина</a>
+            </div>
+            <div className={styles.footer__contacts_item}>
+              <Phone size={28} color="#ff9900" />
+              <a>8(986)746-52-00</a>
+            </div>
+            <div className={styles.footer__contacts_item}>
+              <Mail size={28} color="#ff9900" />
+              <a>Rockot@gmail.com</a>
+            </div>
+          </div>
+          <div className={styles.footer__social}>
+            <div><img src="img/icons/telegram.png" alt="telegram"/></div>
+            <div><img src="img/icons/whatsapp.png" alt="whatsapp"/></div>
           </div>
         </div>
       </div>

@@ -1,0 +1,28 @@
+.container {
+  width: 1400px;
+  margin: 0 auto;
+  height: 500px;
+}
+
+.aplication {
+  margin-top: 140px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  &__title {
+    margin-top: 0;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 45px;
+  }
+  &__description {
+    font-size: 22px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 36px;
+    cursor: pointer;
+  }
+}
