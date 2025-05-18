@@ -61,7 +61,17 @@ function MyForm() {
       />
       {errors.description && <p>{errors.description.message}</p>}
 
-      <input type="file" {...register('media')} accept="image/*,video/*" className={styles.file} />
+      <input
+      id="custom-file-input"
+        type="file"
+        {...register('media')}
+        accept="image/*,video/*"
+        className={styles.file}
+        style={{ display: 'none' }}
+      />
+      <label htmlFor="custom-file-input" className={styles.customFileButton}>
+        Загрузить файл 📎
+      </label>
       {errors.media && <p>{errors.media.message}</p>}
 
       <button type="submit" className={styles.btn}>

@@ -9,7 +9,9 @@ function Header() {
       <div className={styles.header}>
         <div className={styles.header__top}>
           <div className={styles.header__logo}>
-            <div><img src="../../public/img/logo.webp"/></div>
+            <div>
+              <img src="/img/logo.webp" />
+            </div>
             {/* <div>slogan</div> */}
           </div>
           <div className={styles.header__contacts}>
@@ -28,7 +30,7 @@ function Header() {
           <ul className={styles.header__nav}>
             <li>О компании</li>
             <li>Наши преимущества</li>
-            <li>Наши Проектын</li> 
+            <li>Наши Проекты</li>
             <li>Готовые решения</li>
             <li>Контакты</li>
           </ul>

@@ -8,7 +8,18 @@
   width: 40%;
   height: 460px;
   box-shadow: -10px 10px 10px 10px rgba(32, 30, 30, 0.3);
+  @media (max-width: 1440px) {
+    width: 50%;
+  }
+  @media (max-width: 1180px) {
+    width: 45%;
+    padding: 30px;
+  }
+  @media (max-width: 840px) {
+    width: 90%;
+  }
   input,
+  label,
   textarea {
     background-color: rgb(230, 227, 227);
     font-size: 16px;
@@ -17,6 +28,10 @@
     border: none;
     border-radius: 5px;
     font-weight: 700;
+    @media (max-width: 1180px) {
+      width: 96%;
+      padding: 15px 0 15px 15px;
+    }
   }
 
   textarea {
@@ -27,10 +42,16 @@
 
 .name {
   grid-area: 1 / 1 / 2 / 2;
+  @media (max-width: 1180px) {
+    width: 92%!important;
+  }
 }
 
 .phone {
   grid-area: 1 / 2 / 2 / 3;
+  @media (max-width: 1180px) {
+    width: 92%!important;
+  }
 }
 
 .email {
@@ -39,10 +60,6 @@
 
 .description {
   grid-area: 3 / 1 / 4 / 3;
-}
-
-.file {
-  grid-area: 4 / 1 / 5 / 3;
 }
 
 .btn {
@@ -55,4 +72,16 @@
   outline: none;
   border: none;
   font-weight: 700;
+}
+
+.customFileButton {
+  grid-area: 4 / 1 / 5 / 3;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: rgb(230, 227, 227);
+  &:hover {
+    background-color: rgb(230, 227, 227);
+  }
 }
