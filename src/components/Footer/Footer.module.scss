@@ -29,16 +29,10 @@
     height: 60px;
     font-size: 20px;
     font-weight: 300;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 60px;
-    grid-row-gap: 12px;
-    @media (max-width: 1180px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (max-width: 840px) {
-      display: none;
+    display: flex;
+    flex-direction: column;
+    a {
+      cursor: pointer;
     }
   }
   &__logo {

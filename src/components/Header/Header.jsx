@@ -10,7 +10,7 @@ function Header() {
         <div className={styles.header__top}>
           <div className={styles.header__logo}>
             <div>
-              <img src="/img/logo.webp" />
+              <img src="img/logo.webp" />
             </div>
             {/* <div>slogan</div> */}
           </div>

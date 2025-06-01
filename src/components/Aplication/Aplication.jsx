@@ -20,7 +20,7 @@ function Aplication() {
           <div className={styles.aplication__contacts}>
             <div className={styles.aplication__item}>
               <Mail size={34} color="#ff9900" />
-              <a>Rockot@gmail.com</a>
+              <a>Rokot-nn@mail.ru</a>
             </div>
             <div className={styles.aplication__item}>
               <Phone size={34} color="#ff9900" />
