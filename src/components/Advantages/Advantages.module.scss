@@ -1,3 +1,62 @@
+// .container {
+//   width: 1400px;
+//   margin: 0 auto;
+//   @media (max-width: 1440px) {
+//     width: 1100px;
+//   }
+//   @media (max-width: 1180px) {
+//     width: 820px;
+//   }
+//   @media (max-width: 840px) {
+//     width: 540px;
+//   }
+//   @media (max-width: 576px) {
+//     width: 360px;
+//   }
+// }
+
+// .advantages {
+//   margin-top: 60px;
+//   &__title {
+//     // background-color: rgb(250, 182, 10);
+//     background-color: rgb(250, 214, 10);
+//     height: 70px;
+//     width: 500px;
+//     border-radius: 50px;
+//     margin: 0 auto;
+//     border: 2px solid #000;
+//     box-shadow: 10px 10px 10px 10px rgba(32, 30, 30, 0.3);
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     font-size: 34px;
+//     text-transform: uppercase;
+//     margin-bottom: 60px;
+//     @media (max-width: 576px) {
+//       width: 300px;
+//       font-size: 22px;
+//     }
+//   }
+//   &__list {
+//     display: flex;
+//   }
+//   &__item {
+//     width: 240px;
+//     height: 250px;
+//     text-align: center;
+//     h4 {
+//       font-size: 18px;
+//     }
+//     p {
+//       font-size: 16px;
+//       @media (max-width: 576px) {
+//         font-size: 14px;
+//       }
+//     }
+//   }
+// }
+
+
 .container {
   width: 1400px;
   margin: 0 auto;
@@ -18,7 +77,6 @@
 .advantages {
   margin-top: 60px;
   &__title {
-    // background-color: rgb(250, 182, 10);
     background-color: rgb(250, 214, 10);
     height: 70px;
     width: 500px;
@@ -39,20 +97,42 @@
   }
   &__list {
     display: flex;
+    gap: 20px; 
+    overflow-x: auto; 
+    padding-bottom: 20px; 
+    scrollbar-width: thin; 
+    scrollbar-color: #888 transparent;
+    
+    &::-webkit-scrollbar {
+      height: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 3px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
   }
   &__item {
-    // width: 240px;
-    // height: 400px;
-    // img {
-    //   width: 100%;
-    //   height: 100%;
-    // }
-    // p {
-    //   text-align: center;
-    //   font-size: 22px;
-    //   @media (max-width: 576px) {
-    //     font-size: 14px;
-    //   }
-    // }
+    flex: 0 0 auto; /* Важно: запрещаем сжатие элементов */
+    width: 240px;
+    height: 250px;
+    text-align: center;
+    padding: 15px; /* Добавлено: внутренние отступы */
+    background: #f5f5f5; /* Добавлено: фон для карточек */
+    border-radius: 8px; /* Добавлено: скругление углов */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Добавлено: тень */
+    
+    h4 {
+      font-size: 18px;
+      margin: 10px 0; /* Добавлено: отступы для заголовка */
+    }
+    p {
+      font-size: 16px;
+      @media (max-width: 576px) {
+        font-size: 14px;
+      }
+    }
   }
 }
