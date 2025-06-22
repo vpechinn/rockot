@@ -17,6 +17,9 @@
 
 .works {
   margin-top: 520px;
+  @media (max-width: 576px) {
+    margin-top: 340px;
+  }
   &__title {
     // background-color: rgb(250, 182, 10);
     background-color: rgb(250, 214, 10);
@@ -36,7 +39,6 @@
     @media (max-width: 576px) {
       width: 200px;
       font-size: 22px;
-      margin-top: 380px;
     }
   }
   &__list {
