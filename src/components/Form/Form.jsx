@@ -3,7 +3,6 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import styles from '../Form/Form.module.scss';
 
-// Схема валидации
 const schema = yup.object().shape({
   name: yup.string().required('Имя обязательно').min(2, 'Минимум 2 символа'),
   phone: yup
@@ -12,11 +11,7 @@ const schema = yup.object().shape({
     .matches(/^\+?\d{10,15}$/, 'Неверный формат телефона'),
   email: yup.string().email('Неверный email').required('Email обязателен'),
   description: yup.string(),
-  media: yup.mixed().test('fileType', 'Загрузите фото или видео', (value) => {
-    if (!value || value.length === 0) return true;
-    const file = value[0];
-    return ['image/', 'video/'].some((type) => file.type.startsWith(type));
-  }),
+  media: yup.mixed(),
 });
 
 function MyForm() {
@@ -24,56 +19,60 @@ function MyForm() {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm({
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     const formData = new FormData();
     formData.append('name', data.name);
     formData.append('phone', data.phone);
     formData.append('email', data.email);
-    formData.append('description', data.description);
-    formData.append('media', data.media[0]);
+    formData.append('description', data.description || '');
 
-    // Пример отправки
-    fetch('/api/submit', {
-      method: 'POST',
-      body: formData,
-    });
+    if (data.media?.[0]) {
+      formData.append('media', data.media[0]);
+    }
+
+    try {
+      const response = await fetch(
+        'https://script.google.com/macros/s/AKfycbxG3q8FQWuNDMTa5lBC9pVtEiDOzQ1wgm-lj1UxEHxktf5ojiTFw0B1OblmjWhPeA7fPQ/exec',
+        {
+          method: 'POST',
+          body: formData,
+          redirect: 'follow',
+        },
+      );
+      const result = await response.json();
+      if (result.success) {
+        alert('Форма отправлена!');
+        reset();
+      } else {
+        alert('Ошибка: ' + result.error);
+      }
+    } catch (error) {
+      alert('Ошибка отправки: ' + error.message);
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+    <form onSubmit={handleSubmit(onSubmit)} className={styles.form} encType="multipart/form-data">
       <input {...register('name')} placeholder="Имя" className={styles.name} />
-      {errors.name && <p>{errors.name.message}</p>}
-
+      {errors.name && <p className={styles.error}>{errors.name.message}</p>}
       <input {...register('phone')} placeholder="Телефон" className={styles.phone} />
-      {errors.phone && <p>{errors.phone.message}</p>}
-
+      {errors.phone && <p className={styles.error}>{errors.phone.message}</p>}
       <input {...register('email')} placeholder="Электронная почта" className={styles.email} />
-      {errors.email && <p>{errors.email.message}</p>}
-
+      {errors.email && <p className={styles.error}>{errors.email.message}</p>}
       <textarea
         {...register('description')}
         placeholder="Описание"
         className={styles.description}
       />
-      {errors.description && <p>{errors.description.message}</p>}
-
-      <input
-      id="custom-file-input"
-        type="file"
-        {...register('media')}
-        accept="image/*,video/*"
-        className={styles.file}
-        style={{ display: 'none' }}
-      />
-      <label htmlFor="custom-file-input" className={styles.customFileButton}>
-        Загрузить файл 📎
-      </label>
-      {errors.media && <p>{errors.media.message}</p>}
-
+      {errors.description && <p className={styles.error}>{errors.description.message}</p>}
+      {/* Поле для загрузки файла
+      <input type="file" {...register('media')} className={styles.fileInput} />
+      {errors.media && <p className={styles.error}>{errors.media.message}</p>} */}
       <button type="submit" className={styles.btn}>
         Отправить
       </button>
