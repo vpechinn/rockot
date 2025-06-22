@@ -73,8 +73,10 @@
   left: 0;
   @media (max-width: 840px) {
     margin-top: 140px;
+    height: 350px;
   }
   @media (max-width: 576px) {
     margin-top: 90px;
+    height: 250px;
   }
 }
