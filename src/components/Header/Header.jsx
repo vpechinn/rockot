@@ -6,7 +6,7 @@ import styles from './Header.module.scss';
 function Header() {
   return (
     <div className={styles.container}>
-      <div className={styles.header}>
+      <div id="main" className={styles.header}>
         <div className={styles.header__top}>
           <div className={styles.header__logo}>
             <div>
@@ -17,22 +17,32 @@ function Header() {
           <div className={styles.header__contacts}>
             <div className={styles.header__contacts_item}>
               <Mail size={28} color="#ff9900" />
-              <a>Rokot-nn@mail.ru</a>
+              <a href="mailto:Rokot-nn@mail.ru">Rokot-nn@mail.ru</a>
             </div>
             <div className={styles.header__contacts_item}>
               <Phone size={28} color="#ff9900" />
-              <a>8(986)746-52-00</a>
+              <a href="tel:+79867465200">8(986)746-52-00</a>
             </div>
           </div>
         </div>
 
         <div className={styles.header__bot}>
           <ul className={styles.header__nav}>
-            <li>О компании</li>
-            <li>Наши преимущества</li>
-            <li>Наши Проекты</li>
-            <li>Готовые решения</li>
-            <li>Контакты</li>
+            <li>
+              <a href="#about">О компании</a>
+            </li>
+            <li>
+              <a href="#advantages">Наши преимущества</a>
+            </li>
+            <li>
+              <a href="#works">Наши Проекты</a>
+            </li>
+            <li>
+              <a href="#solution">Готовые решения</a>
+            </li>
+            <li>
+              <a href="#contacts">Контакты</a>
+            </li>
           </ul>
         </div>
       </div>

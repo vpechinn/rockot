@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   /* background-color: rgb(224, 220, 220); */
   /* background-color: rgb(250, 182, 10); */

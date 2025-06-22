@@ -4,10 +4,14 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 function Footer() {
   return (
     <div className={styles.footer}>
-      <div className={styles.footer__container}>
+      <div id="contacts" className={styles.footer__container}>
         <div className={styles.footer__list}>
-          <a className={styles.footer__item}>О компании</a>
-          <a className={styles.footer__item}>Наши работы</a>
+          <a href="#main" className={styles.footer__item}>
+            О компании
+          </a>
+          <a href="#works" className={styles.footer__item}>
+            Наши работы
+          </a>
           <a className={styles.footer__item}>Контакты</a>
         </div>
         <div>
@@ -30,16 +34,18 @@ function Footer() {
             </div>
             <div className={styles.footer__contacts_item}>
               <Phone size={28} color="#ff9900" />
-              <a>8(986)746-52-00</a>
+              <a href="tel:+79867465200">8(986)746-52-00</a>
             </div>
             <div className={styles.footer__contacts_item}>
               <Mail size={28} color="#ff9900" />
-              <a>Rokot-nn@mail.ru</a>
+              <a href="mailto:Rokot-nn@mail.ru">Rokot-nn@mail.ru</a>
             </div>
           </div>
           <div className={styles.footer__social}>
             <div>
-              <img src="img/icons/telegram.png" alt="telegram" />
+              <a target="_blank" href="https://web.telegram.org/a/#7275743684">
+                <img src="img/icons/telegram.png" alt="telegram" />
+              </a>
             </div>
             <div>
               <img src="img/icons/whatsapp.png" alt="whatsapp" />

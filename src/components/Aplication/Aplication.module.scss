@@ -49,8 +49,12 @@
     gap: 10px;
     font-size: 36px;
     cursor: pointer;
+    a {
+      text-decoration: none;
+      color: black;
+    }
     @media (max-width: 1180px) {
-     font-size: 26px;
+      font-size: 26px;
     }
   }
   &__info {

@@ -20,11 +20,11 @@ function Aplication() {
           <div className={styles.aplication__contacts}>
             <div className={styles.aplication__item}>
               <Mail size={34} color="#ff9900" />
-              <a>Rokot-nn@mail.ru</a>
+              <a href="mailto:Rokot-nn@mail.ru">Rokot-nn@mail.ru</a>
             </div>
             <div className={styles.aplication__item}>
               <Phone size={34} color="#ff9900" />
-              <a>8(986)746-52-00</a>
+              <a href="tel:+79867465200">8(986)746-52-00</a>
             </div>
           </div>
         </div>

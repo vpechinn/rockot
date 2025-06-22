@@ -3,7 +3,7 @@ import styles from './Advantages.module.scss';
 function Advantages() {
   return (
     <div className={styles.container}>
-      <div className={styles.advantages}>
+      <div id="advantages" className={styles.advantages}>
         <h2 className={styles.advantages__title}>Наши приемущества</h2>
         <div className={styles.advantages__list}>
           <div className={styles.advantages__item}>

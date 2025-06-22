@@ -5,7 +5,7 @@ import data from '../../data/products.js';
 function Works() {
   return (
     <div className={styles.container}>
-      <div className={styles.works}>
+      <div id="works" className={styles.works}>
         <h2 className={styles.works__title}>НАШИ ПРОЕКТЫ</h2>
         <div className={styles.works__list}>
           {data.map((item) => (
